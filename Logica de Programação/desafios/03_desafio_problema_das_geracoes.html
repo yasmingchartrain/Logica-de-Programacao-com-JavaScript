@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+ <h1> Desafio das Gerações : </h1>
+<script>
+
+	function mostrar(texto){
+		document.write(texto);
+	}
+
+	function pulaLinha(){
+		document.write("<br>");
+	}
+
+	var anoAtual= new Date().getFullYear();
+	var diferenca = anoAtual - 1500;
+	var geracoes = diferenca / 28;
+
+mostrar("Do ano de 1500 para hoje se passaram " + diferenca + " anos.");
+
+pulaLinha();
+
+mostrar("Nesses " + diferenca + " anos nos tivemos " + Math.round(geracoes) + " gerações." );
+
+</script>
