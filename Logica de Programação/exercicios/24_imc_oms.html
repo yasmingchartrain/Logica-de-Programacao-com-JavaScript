@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+<script>
+	function pulaLinha() {
+		document.write("<br>");
+	}
+
+	function mostra(texto) {
+		document.write(texto);
+		pulaLinha();
+	}
+
+	
+	function calculaImc(altura, peso) {
+		return peso/(altura * altura);
+	}
+
+
+	var nomeUsuario = prompt("Qual seu nome ? ");
+	var alturaUsuario = prompt(nomeUsuario + " qual sua altura  ? ");
+	var pesoUsuario = prompt(nomeUsuario + " qual seu peso ?");
+
+	var imc = calculaImc(alturaUsuario, pesoUsuario);
+
+
+	mostra(nomeUsuario + " seu IMC é " + Math.round(imc) );
+
+
+	if (imc < 18.5) {
+		
+		mostra("Você está abaixo do peso considerado saúdavel para sua altura !! vai comer " + nomeUsuario + "!!!");
+	}
+
+	if (imc > 35) {
+		
+		mostra("Você está acima do peso considerado saúdavel para sua altura !! " + nomeUsuario + " Paree de comerr tanta besteira !!!");
+
+	}
+	
+	if (imc >= 18.5 && imc <= 35) {
+
+		mostra("Você está saúdavel! Parabéns " + nomeUsuario + ".")
+	}
+
+</script>

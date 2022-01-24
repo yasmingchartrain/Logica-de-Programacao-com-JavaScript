@@ -1,0 +1,41 @@
+<meta charset="UTF-8">
+
+<h1>***Jogo do Adivinha***<h1>
+<h2> Adivinha em qual número estou pensando:</h2>
+
+<input/>
+<button> Verificar </button>
+
+<script>
+
+var numCorreto = Math.round(Math.random() * 10);
+
+var input = document.querySelector("input");
+input.focus();
+
+
+
+
+function verificar() {
+	if(input.value == numCorreto) {
+		alert("Você acertou!");
+		alert("Vou pensar em um novo número agora!")
+		
+		numCorreto = Math.round(Math.random() * 10);
+	} else {
+		alert("Você errou !! O número correto era: " + numCorreto + ".");
+		alert("Vou pensar em um novo número agora!");
+
+
+		numCorreto = Math.round(Math.random() * 10);
+	}
+	input.value = "";
+	input.focus();
+	 
+}
+var button = document.querySelector("button");
+button.onclick = verificar;
+
+
+
+</script>

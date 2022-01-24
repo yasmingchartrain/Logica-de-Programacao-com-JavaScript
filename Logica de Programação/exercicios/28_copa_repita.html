@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+<script>
+
+function pulaLinha() {
+	document.write("<br>");
+	document.write("<br>");
+}
+
+function mostra(texto) {
+	document.write(texto);
+	pulaLinha();
+}
+var limite = parseInt(prompt("Até qual Copa você quer calcular?"))
+var ano = 1930;
+
+while(ano <= limite) {
+	mostra("Teve Copa do Mundo no ano de " + ano);
+	ano = ano + 4;
+}
+
+mostra("Fim.");
+</script>

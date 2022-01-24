@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+
+<script>
+
+function pulaLinha() {
+	document.write("<br>");
+}
+
+function mostrar(texto) {
+	document.write(texto);
+}
+
+function calculaPorcento(divida,salario) {
+	return ((divida / 12) / salario) * 100
+}
+
+var nome = prompt("Informe seu nome: ");
+var dividaUsuario = prompt("Informe o valor da sua dívida:");
+var salarioUsuario = prompt("Informe o valor do seu salario mensal:");
+var valorEncontrado = calculaPorcento(dividaUsuario, salarioUsuario);
+
+
+mostrar(" O SCR de " + nome + " é " + Math.round(valorEncontrado) + "% .");
+</script>

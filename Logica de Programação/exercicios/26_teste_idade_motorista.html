@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+
+<script>
+	function pulaLinha() { 
+		document.write("<br>");
+	}
+
+	function mostra(texto) {
+		document.write(texto);
+		pulaLinha();
+	}
+
+	var idade = parseInt(prompt("Quantos anos você tem? "));
+	var temCarteira = prompt("Você já tem carteira de motorista ? ( Responsa S para sim e N para não :");
+
+	if(idade >= 18 && temCarteira == "S") {
+		mostra("Autorizado a dirigir!");
+	}
+
+	else {
+		mostra("Não tem autorização para dirigir!")
+	}
+</script>

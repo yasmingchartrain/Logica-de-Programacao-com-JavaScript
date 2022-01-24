@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<script>
+
+	function pulaLinha() {
+		document.write("<br>");
+	}
+
+	function mostra(texto) {
+		document.write(texto);
+		pulaLinha();
+	}
+
+	var numeroPensado = Math.round(Math.random() *10);
+	
+	var tentativa = 1;
+	
+
+	while(tentativa <= 3){
+		var chute = parseInt(prompt("Digite seu chute de 0 a 10 :"));
+
+		if(chute == numeroPensado) {
+			mostra("<strong>Parabéns! Você acertou!</strong>");
+			break; // usado para pararo pool caso o cont nao estiver na 3 tentativa
+		}
+		
+			else {
+				mostra("<strong> Você errou! </strong>");
+				
+			}
+
+		tentativa++
+
+	}
+</script>

@@ -1,0 +1,47 @@
+<meta charset="UTF-8">
+
+<script>
+	
+	function pulaL() {
+		document.write("<br>");
+	}
+
+	function mostra(texto) {
+		document.write(texto);
+		pulaL();
+	}
+
+	var numPensado = Math.round(Math.random() * 10);
+	
+	var tentativa = 1;
+
+
+	while(tentativa <= 3) {
+		var chute = parseInt(prompt("Qual seu chute de 0 a 10 ?"));
+
+
+		if(chute == numPensado) {
+			mostra("Parabéns você acertou! O número pensado foi : " + numPensado);
+			break;
+		}
+			else {
+				if (chute > numPensado) {
+				alert("Você chutou muito alto!! Tente novamente!");
+				}
+				else{
+					alert("Você chutou muito baixo!! Tente novamente!")
+				}
+			}
+			
+		tentativa++
+		
+		if(tentativa == 2){
+			alert("Você tem mais 2 chance!!")
+		}
+		if(tentativa == 3){
+			alert("Sua ultima chance!!")
+		}
+	}
+	mostra("Você errou, o número pensado foi: " +numPensado);
+	
+</script>

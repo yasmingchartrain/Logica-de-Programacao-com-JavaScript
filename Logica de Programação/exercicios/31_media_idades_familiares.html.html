@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+
+<script>
+
+function pulaL() {
+    document.write("<br>");
+}
+
+function mostra(texto) {
+    document.write(texto);
+    pulaL();
+}
+
+var qntPessoas = parseInt(prompt("Quantas pessoas tem na sua familia?"));
+var somaIdades = 0;
+var cont = 1;
+
+while(cont <= qntPessoas) {
+    var idade = parseInt(prompt("Qual a idade do seu familiar?"));
+    cont++
+    somaIdades = somaIdades + idade;
+}
+
+mostra("A média é " + (somaIdades / qntPessoas));
+
+
+
+
+
+</script>
